@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://kit.fontawesome.com/7adfaeb8ff.js" crossorigin="anonymous"></script>
+  <title>Personal Portfolio - Avinash</title>
+
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <!-- <img src="images/images/logo.png" alt="" class="logo"> -->
+        <h1><span>A</span>vinash</h1>
+        <ul id="sidemenu">
+          <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#porfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+          <i class="fa-solid fa-xmark " onclick="closeMenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars " onclick="openMenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi, I'm <span>Avinash</span> <br> from Himachal <br> Pradesh India</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============  About  =============== -->
+  <div id="about">
+    <div class="container ">
+      <div class="row">
+        <div class="about-col-1 autoShow">
+          <img src="images/images/AVIABOUT 2.png" alt="">
+        </div>
+        <div class="about-col-2 autoShow">
+          <h1 class="sub-title">About me</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, possimus. Aliquam labore
+            minus amet hic tenetur eos nulla odio necessitatibus tempore dolores dolor dolore voluptatibus
+            quisquam mollitia commodi quibusdam, cupiditate libero ipsum voluptas laudantium odit? Iusto
+            temporibus qui omnis molestias.</p>
+
+          <div class="tab-title">
+            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Using Figma</li>
+              <li><span>Web Development</span><br>HTML, CSS, Js</li>
+              <li><span>Agentic AI</span><br>Built AI-integrated automation workflows using n8n</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2025 Current</span><br>Fresher</li>
+              <!-- <li><span>2019 2021</span><br>Team lead at StarApp LLC.</li>
+              <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+              <li><span>2016 2017</span><br>Internship at ekart eCommerce.</li> -->
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2025</span><br>BCA from Govt. College Chamba from HPU university</li>
+              <!-- <li><span>2016</span><br>MBA from MIT Bangalore.</li> -->
+              <!-- <li><span>2014</span><br>BBA from ISM Bangalore.</li> -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ==============services============ -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Development</h2>
+          <p> build fast, responsive, and SEO-friendly websites using modern technologies like HTML, CSS, JavaScript.
+          </p>
+          <a href="">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-alt"></i>
+          <h2>UI/UX Design</h2>
+          <p>I design clean and user-friendly interfaces that not only look good but also improve the overall user
+            experience and usability.
+          </p>
+          <a href="">Learn more</a>
+        </div>
+        <!-- <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>App Development</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, et! Voluptates eius eveniet impedit ex!f
+          </p>
+          <a href="">Learn more</a>
+        </div> -->
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>AI Agent</h2>
+          <p>I create AI-driven automation agents using n8n and other tools, allowing tasks to run intelligently with
+            minimal manual input.
+          </p>
+          <a href="">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Portfolio ========== -->
+  <div id="porfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/images/work-1.png" alt="">
+          <div class="layer">
+            <h3>My Portfolio Webpage</h3>
+            <p>A fully responsive personal portfolio website built using HTML, CSS, and JavaScript. It features a
+              dark/light theme toggle, smooth scrolling, and modern design.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/images/work-2.png" alt="">
+          <div class="layer">
+            <h3>Music Apps</h3>
+            <p>A clean and minimal user interface for a music streaming app. Designed with user experience in mind,
+              using HTML, CSS, and basic JS for interactions.</p> <a href="#"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/images/work-3.png" alt="">
+          <div class="layer">
+            <h3>Basic Online Shopping website</h3>
+            <p>An eCommerce-style website layout showcasing product listings, a shopping cart design, and clean UI. Built using basic front-end technologies.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="" class="btn">See more</a>
+    </div>
+  </div>
+
+
+  <!-- =============== contact ================= -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i> avinashjariyal@hotmail.com</p>
+          <p><i class="fa-brands fa-square-whatsapp"></i><i class="fa-solid fa-phone"></i>9876543210</i></p>
+          <p><i class="fa-brands fa-square-whatsapp"></i><i class="fa-solid fa-phone"></i>9876543210</i></p>
+          <!-- <img src="images/images/arattai-app-icon-hd.png" width="25" alt=""> -->
+          <div class="arattai">
+            <img src="images/images/arattai-app-icon-hd.png" width="25" alt="arattai logo"> <span>@jerru</span>
+          </div>
+
+
+          <!--  -->
+          <div class="social-icon">
+            <a href="https://www.facebook.com/iamavijerry" target="_blank"><i
+                class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://github.com/iamavijerry" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.instagram.com/zzen_pi" target="_blank"><i
+                class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/iamavijerry/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="images/images/AVINASH JARIYAL CV.pdf" download="" class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your full Name" required>
+            <input type="email" name="Email" id="" placeholder="Enter your email" required>
+            <textarea name="Massege" rows="6" id="" placeholder="Enter your massege"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p> Copyright &copy; Avinash. <i class="fa-solid fa-heart"></i> 2025 All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwpL6ZWvJPmArVltsCb_f-Ozw6wb66_TYNGkx9VdzUUNrxSF32CB-oeEs8ao_ORJZfx/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
