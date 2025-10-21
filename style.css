@@ -34,18 +34,128 @@ body {
     color: var(--text-color);
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 60px; */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+.navbar-logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-logo h1 span {
+    color: var(--accent-color);
+    -webkit-text-stroke: 1px var(--text-color);
+    font-size: larger;
+}
+
+.navbar-container .navbar-menu {
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.navbar-menu li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.35s;
+}
+
+.navbar-menu li a:hover::after {
+    width: 100%;
+}
+
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ---------- toggle theme button css ----------- */
+
+.navbar-container button{
+    padding: 2px 4px 0px 8px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    margin: 0 20px 0 8px;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
 #header {
     width: 100%;
     height: 110vh;
     background-image: url(images/images/IMG20251001084941.png);
     background-size: cover;
     background-position: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .container {
     padding: 10px 10%;
 }
 
+/* 
 nav {
     display: flex;
     align-items: center;
@@ -58,9 +168,6 @@ nav h1 span {
     color: var(--accent-color);
 }
 
-/* .logo{
-    width: 140px;
-} */
 
 nav ul li {
     display: inline-block;
@@ -108,14 +215,11 @@ nav ul button i{
     border: none;
     cursor: pointer;
     color: var(--text-color);
-}
-
-
-
-
-/* .nav-icon{
-    display: none;
 } */
+
+
+
+/* header========== */
 
 .header-text {
     margin-top: 20%;
@@ -129,6 +233,10 @@ nav ul button i{
 
 .header-text h1 span {
     color: var(--accent-color);
+}
+.header-text h1 span span{
+    /* color: var(--accent-color); */
+    -webkit-text-stroke: 1px var(--text-color);
 }
 
 /* ==============  About  =============== */
@@ -156,9 +264,17 @@ nav ul button i{
 
 .about-col-2 {
     flex-basis: 60%;
+    margin: 20px 0 0 0;
+}
+
+
+.about-col-2 p {
+    text-wrap: wrap;
+    text-align: justify;
 }
 
 .sub-title {
+    margin: -40px 0 0 0;
     font-size: 60px;
     font-weight: 600;
     color: var(--text-color);
@@ -263,7 +379,7 @@ nav ul button i{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .work {
@@ -311,7 +427,7 @@ nav ul button i{
     font-size: 18px;
     line-height: 60px;
     background: var(--bg-color);
-    border-radius: 60%;
+    border-radius: 50%;
     padding: 8px 25px;
     color: var(--accent-color2);
 }
@@ -344,6 +460,7 @@ nav ul button i{
 
 /* =============== contact ============== */
 
+
 .contact-left {
     flex-basis: 35%;
 }
@@ -362,12 +479,13 @@ nav ul button i{
     font-size: 1.2rem;
 }
 
-.arattai{
+.arattai {
     display: inline-block;
-    margin: 20px 15px 0 0 ;
+    margin: 20px 15px 0 0;
 }
-.arattai img{
-    margin: 12px 15px -8px 0 ;
+
+.arattai img {
+    margin: 12px 15px -8px 0;
 }
 
 
@@ -379,7 +497,7 @@ nav ul button i{
     text-decoration: none;
     font-size: 1.3rem;
     margin-right: 15px;
-    color: #ababab;
+    color: var(--text-color);
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -406,14 +524,12 @@ form textarea {
     background-color: var(--box-color);
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--text-color);
     font-size: 18px;
     border-radius: 6px;
 }
 
 form .btn2 {
-    /* padding: 14px 60px; */
-    font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 }
@@ -426,12 +542,12 @@ form .btn2 {
     text-align: center;
 }
 
-.copyright p{
+.copyright p {
     color: var(--text-color);
 }
 
 .copyright i {
-    color: #00d080;
+    color: var(--accent-color2);
 }
 
 
@@ -453,7 +569,7 @@ nav .fa-xmark {
 @keyframes autoShowAnimation {
     from {
         opacity: 0;
-        transform: translateY(100px) scale(0.5);
+        transform: translateY(200px) scale(0.5);
     }
 
     to {
