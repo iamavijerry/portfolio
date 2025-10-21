@@ -1,59 +1,66 @@
 /* =============== CSS For Small Screen ============= */
 
 
-@media only screen and (max-width: 720px ) {
+@media only screen and (max-width: 880px) {
+
+  /* ===========Navbar========= */
+  .navbar {
+    background: none;
+    box-shadow:none;
+    backdrop-filter: none;
+  }
+
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    background: transparent;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
   #header {
     background-image: url(images/images/IMG20251001084941-Tablet.png);
     transition: .5s ease;
   }
 
   .header-text {
-    margin-top: 100%;
+    /* margin-top: 100%; */
     font-size: 20px;
   }
 
   .header-text h1 {
     font-size: 30px;
     margin-top: 20px;
-  }
-
-
-  nav .fa-bars {
-    display: block;
-  }
-
-  nav .fa-xmark {
-    display: block;
-  }
-
-  nav ul {
-    background: #00d080;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding: 50px 0 0 0;
-    z-index: 2;
-    transition: right 0.5s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 25px;
-  }
-
-  nav ul li a {
-    color: #000000;
-    font-weight: 600;
-  }
-
-  nav ul .fa-xmark {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-    color: #000000;
   }
 
   .sub-title {
@@ -76,11 +83,9 @@
   }
 
 
-  nav ul button {
-    /* margin-top: 9px; */
-    margin-left: 22px;
 
-  }
+
+
 }
 
 @media only screen and (max-width: 680px) {
@@ -89,7 +94,82 @@
     transition: .5s ease;
   }
 
+  .about-col-2 p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
 }
 
+@media (max-width: 480px) {
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1rem;
+  }
+
+  .navbar-container .navbar-menu li a {
+    font-size: 1.2rem;
+    padding: 3px 15px;
+  }
+
+  .header-text {
+    margin-top: 100%;
+  }
+
+  .sub-title {
+    margin: 0 0 0 0;
+  }
+
+  .about-col-2 {
+    flex-basis: 100%;
+  }
 
 
+
+  .tab-links {
+    margin-right: 20px;
+    font: 50px;
+    font-weight: 500;
+
+  }
+
+  #about {
+    padding: 0px 0;
+
+  }
+
+  #porfolio {
+    padding: 0 0;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .btn2{
+    font-size: 16px;
+  }
+
+
+  .layer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .layer a {
+    margin-top: 15px;
+  }
+
+  .contact-left p i {
+    margin-right: 5px;
+}
+
+  .contact-info{
+    font-size: 16px;
+  }
+}
