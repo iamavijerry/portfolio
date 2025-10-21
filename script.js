@@ -15,15 +15,17 @@ function openTab(tabname) {
 
 
 
-let sideMenu = document.getElementById("sidemenu");
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navbarMenu = document.querySelector('.navbar-menu');
 
-function openMenu() {
-  sideMenu.style.right = "0"
-}
-function closeMenu() {
-  sideMenu.style.right = "-200px"
-}
+navbarToggle.addEventListener('click', () => {
+  navbarToggle.classList.toggle('active');
+  navbarMenu.classList.toggle('active');
+});
 
+
+
+// ================== theme ===============
 
 const toggleBtn = document.getElementById("theme-toggle");
 // Default: light theme (no need to add class)
@@ -33,29 +35,18 @@ toggleBtn.addEventListener("click", () => {
   // Agar ab dark mode on ho gaya, to sun icon dikhao
   if (isDark) {
     toggleBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-        toggleBtn.style.color = "white"
+    toggleBtn.style.color = "white"
+    body.style.transition = "0.5s ease";
+
 
   } else {
     toggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     toggleBtn.style.color = "black"
+    body.style.transition = "0.5s ease";
+
   }
 });
 
 
 
-// const toggleButton = document.getElementById('theme-toggle');
-// const body = document.body;
 
-// // Shuruaat me light mode lagao
-// body.classList.add('light-mode');
-
-// // Click event
-// toggleButton.addEventListener('click', () => {
-//   if (body.classList.contains('light-mode')) {
-//     body.classList.replace('light-mode', 'dark-mode');
-//     toggleButton.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-//   } else {
-//     body.classList.replace('dark-mode', 'light-mode');
-//     toggleButton.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-//   }
-// });
